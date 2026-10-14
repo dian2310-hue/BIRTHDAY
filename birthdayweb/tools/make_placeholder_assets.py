@@ -3,7 +3,7 @@ tools/make_placeholder_assets.py
 Membuat file PLACEHOLDER (bukan foto/lagu asli):
   - foto netral & cover lagu (SVG) di static/images/photos/
   - ilustrasi pasangan minimalis di static/images/stickers/
-  - lagu music-box singkat buatan sendiri (original, bebas hak cipta) di static/music/soundtrack.wav
+  - lagu music-box singkat buatan sendiri (original, bebas hak cipta) di static/music/oursong.wav
 Jalankan dari folder proyek:  python tools/make_placeholder_assets.py
 Tidak wajib dijalankan lagi; file hasilnya sudah ada di proyek.
 """
@@ -99,7 +99,7 @@ for i in range(delay, total):                            # gema halus
     buf[i] += .22 * buf[i - delay]
 peak = max(abs(x) for x in buf) or 1
 fade = int(2.5 * SR)
-with wave.open(str(MUSIC / "soundtrack.wav"), "wb") as w:
+with wave.open(str(MUSIC / "oursong.wav"), "wb") as w:
     w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR)
     frames = bytearray()
     for i, x in enumerate(buf):

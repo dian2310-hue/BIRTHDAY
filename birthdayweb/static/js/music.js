@@ -6,7 +6,7 @@
   const pill = $('#music-pill');
   const label = $('#music-label');
   const btn = $('#music-btn');
-  const title = document.body.dataset.musicTitle || 'Lagu kitak';
+  const title = document.body.dataset.musicTitle || 'Lagu kita';
 
   audio.volume = 0.35;                       // volume awal rendah & nyaman
   let failed = !audio.getAttribute('src');   // belum ada file musik sama sekali
@@ -21,13 +21,13 @@
     label.textContent = failed ? 'Musik belum tersedia' : on ? 'Lagu: ' + title : 'Putar lagu kita';
     $$('[data-music-toggle]').forEach((b) => {
       const l = b.querySelector('.mt-label');
-      if (l) l.textContent = failed ? 'Musik belum tersedia' : on ? 'Pause our soundtrack' : 'Play our little soundtrack';
+      if (l) l.textContent = failed ? 'Musik belum tersedia' : on ? 'Stop lagu' : 'Putar lagu kita';
     });
   }
 
   async function start() {
     if (failed) {
-      window.BD.toast('File musik belum ditemukan. Taruh soundtrack.mp3 di folder static/music/ ya.');
+      window.BD.toast('File musik belum ditemukan. Taruh oursong.mp3 di folder static/music/ ya.');
       ui();
       return false;
     }

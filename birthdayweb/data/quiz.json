@@ -8,6 +8,6 @@
   {"id": "q4", "short": "Panggilan sayang", "text": "Apa panggilan sayang Abang ke Adek?", "type": "multi",
    "options": ["Sayang", "BB", "Baby", "Cintaku"]},
   {"id": "q5", "short": "Pesan untuk Adek", "type": "text",
-   "text": "Berikan pesan untuk Adek supaya Adek bisa jadi pacar yang jauh lebih baik lagi buat Abang.",
+   "text": "Berikan pesan untuk adek supaya adek bisa jadi pacar yang jauh lebih baik lagi buat abang.",
    "placeholder": "Tulis pesan untuk Adek di sini...", "max_length": 600}
 ]
